@@ -1,0 +1,23 @@
+[package]
+name = "sios-wm"
+version = "0.1.0"
+edition = "2024"
+
+[dependencies]
+sios-wm-api = { path = "/etc/home/.config/sios-wm-api" }
+sios-wm-shader-api = { path = "/etc/home/.config/sios-wm-shader-api" }
+smithay = { version = "=0.7.0", default-features = false, features =[
+    "wayland_frontend",
+    "backend_drm",
+    "backend_gbm",
+    "backend_egl",
+    "backend_session_libseat",
+    "backend_udev",
+    "backend_winit",
+    "backend_libinput",
+    "renderer_gl",
+] }
+xcursor = "0.3.11"
+calloop = "0.14"
+libloading = "0.8"
+regex = "1"
